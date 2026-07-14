@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小倉 大河 (Taiga Ogura) - Cloud Infrastructure & SRE Portfolio</title>
+  <meta name="description" content="AWSの設計構築、SRE、IaC（Terraform / CDK）を得意とするクラウドインフラエンジニア小倉大河のポートフォリオ・職務経歴書サイトです。">
+
+  <!-- SEO Meta Tags for GitHub Pages -->
+  <meta property="og:title" content="小倉 大河 (Taiga Ogura) - Portfolio">
+  <meta property="og:description" content="AWSの設計構築、SRE、IaC（Terraform / CDK）を得意とするクラウドインフラエンジニア小倉大河のポートフォリオ。">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/profile/profile.JPG" type="image/jpeg">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">Taiga Ogura</a>
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#about"><i class="fa-solid fa-user"></i> プロフィール</a></li>
+          <li><a href="#skills"><i class="fa-solid fa-code"></i> 保有スキル</a></li>
+          <li><a href="#experience"><i class="fa-solid fa-briefcase"></i> 実務経歴</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-envelope"></i> お問い合わせ</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+      <button class="menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Cloud Infrastructure & SRE Engineer</div>
+      <h1 class="hero-title">
+        インフラからSaaSまでをコード化し、<br>
+        <span>開発と監視・運用の自動化を推進する</span>
+      </h1>
+      <p class="hero-subtitle">
+        AWSのマルチアカウント・ネットワーク設計から、Terraformを用いたインフラ＆SaaSのコード化（GitOps）、GitHub
+        Actionsによる安全なCI/CD、可観測性（Observability）の導入まで一貫して対応します。
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-down"></i> 経歴を見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About/Profile Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">プロフィール</h2>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar-container">
+            <img src="images/profile/profile.JPG" alt="小倉 大河" class="profile-avatar-img">
+          </div>
+          <h3 class="profile-name">小倉 大河</h3>
+          <p class="profile-role">Cloud Infrastructure & SRE Engineer</p>
+          <div class="profile-meta">
+            <div class="meta-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Tokyo, Japan</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>taiga.ogura [at] example.com</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/tiga-ga" target="_blank">github.com/tiga-ga</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="profile-desc">
+            AWSの設計構築から運用保守、およびSRE推進を得意とするインフラエンジニアです。<br><br>
+            AWSマルチアカウントやTransit Gateway等を用いた閉域ネットワーク構築から、Terraformによるインフラ・GitHub・監視設定のコード化（IaC / GitOps）、GitHub
+            Actionsを用いたCI/CDパイプライン構築、GrafanaやDatadogを用いた可観測性の整備まで一貫して対応します。<br><br>
+            「目的の常時立ち返りと再確認」「迅速なレスポンス」「設計・設定根拠の明確化とドキュメント共有」をチーム開発のマインドセットとし、属人化のない持続可能で透明性の高いシステム基盤を提供します。
+          </p>
+          <div class="about-details-grid">
+            <!-- 得意分野 (Expertise) -->
+            <div class="details-card">
+              <h4 class="details-card-title"><i class="fa-solid fa-star"></i> 得意分野</h4>
+              <ul class="details-list">
+                <li class="details-item">
+                  <span class="details-item-title">AWS設計構築・運用保守</span>
+                  <span class="details-item-desc">VPCやTransit
+                    Gatewayを用いた閉域ネットワーク構成、ECS/EC2環境の構築、マルチアカウント（Organizations）の設計から日々の運用保守まで対応。</span>
+                </li>
+                <li class="details-item">
+                  <span class="details-item-title">インフラ & SaaSのコード化 (IaC / GitOps)</span>
+                  <span class="details-item-desc">特にTerraform（HCP
+                    Terraform含む）によるAWS構築に加え、GitHub設定やDatadog等の監視設定のIaC化を得意とし、個人開発レベルでNew RelicのIaC化の実装実績もあります。</span>
+                </li>
+                <li class="details-item">
+                  <span class="details-item-title">CI/CDパイプライン構築</span>
+                  <span class="details-item-desc">特にGitHub
+                    Actionsを活用したビルド・デプロイの自動化、AIレビューの組み込み、脆弱性スキャンの自動化などによる、安全で迅速な開発リリースフローの構築。</span>
+                </li>
+                <li class="details-item">
+                  <span class="details-item-title">運用監視・業務自動化</span>
+                  <span
+                    class="details-item-desc">GrafanaやDatadogを用いたシステムの可観測性（Observability）向上、およびSlackやGAS/Lambdaを組み合わせた運用トイル（手作業）の削減と障害通知の仕組み化。</span>
+                </li>
+              </ul>
+            </div>
+            <!-- 業務で意識していること (Mindset) -->
+            <div class="details-card">
+              <h4 class="details-card-title"><i class="fa-solid fa-lightbulb"></i> 業務で意識していること</h4>
+              <ul class="details-list">
+                <li class="details-item">
+                  <span class="details-item-title">「目的」の常時立ち返りと再確認</span>
+                  <span
+                    class="details-item-desc">チーム内の議論やタスク推進において、都度本来の目的に立ち返ることで形骸化を防ぎ、真に必要なタスク（スコープ）とやらないことを明確化します。</span>
+                </li>
+                <li class="details-item">
+                  <span class="details-item-title">迅速なレスポンスの徹底</span>
+                  <span
+                    class="details-item-desc">チャットツールの未読ステータスを常時確認・解消し、相手を「待たせない」即時コミュニケーションとタスク処理を意識することで、チーム全体の進行速度を最大化します。</span>
+                </li>
+                <li class="details-item">
+                  <span class="details-item-title">設計・設定根拠の明確化</span>
+                  <span
+                    class="details-item-desc">インフラ設計やパラメータ決定の際、チームメンバーが判断の背景や選定理由を正しく把握できるよう、決定根拠（Why）をドキュメント化して共有し、属人化を防ぐ透明性の高い運用を意識しています。</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">保有スキル</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- AWS Category -->
+        <div class="skill-category highlight-aws">
+          <div class="category-header">
+            <i class="fa-brands fa-aws category-icon" style="color: #ff9900; font-size: 2.25rem;"></i>
+            <div class="category-title-wrapper">
+              <span class="category-subtitle">Main Expertise</span>
+              <h3 class="category-title">AWS Services</h3>
+            </div>
+          </div>
+          <div class="aws-categories-container">
+            <!-- Compute & Serverless -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-server"></i> Compute & Serverless</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Amazon Elastic Container Service (Amazon ECS)</span>
+                <span class="skill-badge">Amazon Elastic Compute Cloud (Amazon EC2)</span>
+                <span class="skill-badge">AWS Lambda</span>
+                <span class="skill-badge">AWS Step Functions</span>
+                <span class="skill-badge">AWS Amplify</span>
+              </div>
+            </div>
+            <!-- Networking & Content Delivery -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-network-wired"></i> Networking & CDN</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Amazon Virtual Private Cloud (Amazon VPC)</span>
+                <span class="skill-badge">AWS Transit Gateway</span>
+                <span class="skill-badge">Amazon Route 53</span>
+                <span class="skill-badge">AWS PrivateLink</span>
+                <span class="skill-badge">Amazon CloudFront</span>
+                <span class="skill-badge">AWS WAF</span>
+              </div>
+            </div>
+            <!-- Databases -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-database"></i> Databases</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Amazon Relational Database Service (Amazon RDS)</span>
+              </div>
+            </div>
+            <!-- Storage -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-hard-drive"></i> Storage</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Amazon Simple Storage Service (Amazon S3)</span>
+                <span class="skill-badge">Amazon Elastic File System (Amazon EFS)</span>
+              </div>
+            </div>
+            <!-- Security & Governance -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-shield-halved"></i> Security & Governance</h4>
+              <div class="skill-list">
+                <span class="skill-badge">AWS Identity and Access Management (AWS IAM)</span>
+                <span class="skill-badge">AWS Organizations</span>
+                <span class="skill-badge">AWS Security Hub</span>
+                <span class="skill-badge">Amazon GuardDuty</span>
+                <span class="skill-badge">AWS CloudTrail</span>
+                <span class="skill-badge">AWS Config</span>
+                <span class="skill-badge">AWS Systems Manager</span>
+              </div>
+            </div>
+            <!-- Analytics & Integration -->
+            <div class="aws-sub-category">
+              <h4 class="aws-sub-title"><i class="fa-solid fa-chart-pie"></i> Analytics & Integration</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Amazon EventBridge</span>
+                <span class="skill-badge">Amazon QuickSight</span>
+                <span class="skill-badge">AWS Glue</span>
+                <span class="skill-badge">Amazon Athena</span>
+                <span class="skill-badge">Amazon API Gateway</span>
+                <span class="skill-badge">Amazon Cognito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- IaC Category -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fa-solid fa-shapes category-icon" style="color: #845ef7;"></i>
+            <h3 class="category-title">Infrastructure as Code</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">Terraform</span>
+            <span class="skill-badge">HCP Terraform</span>
+            <span class="skill-badge">AWS CDK (TypeScript)</span>
+            <span class="skill-badge">CDK for Terraform (TypeScript)</span>
+            <span class="skill-badge">CloudFormation</span>
+          </div>
+        </div>
+        <!-- CI/CD Category -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fa-solid fa-arrows-spin category-icon" style="color: #3b82f6;"></i>
+            <h3 class="category-title">CI/CD</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">GitHub Actions</span>
+            <span class="skill-badge">CircleCI</span>
+            <span class="skill-badge">AWS CodePipeline</span>
+            <span class="skill-badge">AWS CodeBuild</span>
+          </div>
+        </div>
+        <!-- Observability & Security Category -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fa-solid fa-chart-line category-icon" style="color: #10b981;"></i>
+            <h3 class="category-title">Observability & Security</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">Datadog</span>
+            <span class="skill-badge">Grafana</span>
+            <span class="skill-badge">CloudWatch</span>
+            <span class="skill-badge">Snyk (脆弱性管理)</span>
+          </div>
+        </div>
+        <!-- Languages & Frameworks Category -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fa-solid fa-code category-icon" style="color: #ff8787;"></i>
+            <h3 class="category-title">Languages & Frameworks</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">TypeScript</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">Nuxt 3</span>
+          </div>
+        </div>
+        <!-- Tools & Collaboration Category -->
+        <div class="skill-category span-full">
+          <div class="category-header">
+            <i class="fa-solid fa-screwdriver-wrench category-icon" style="color: #a855f7;"></i>
+            <h3 class="category-title">Tools & Collaboration</h3>
+          </div>
+          <div class="tools-categories-container">
+            <!-- Version Control -->
+            <div class="tools-sub-category">
+              <h4 class="tools-sub-title"><i class="fa-solid fa-code-branch"></i> Version Control</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">AWS CodeCommit</span>
+              </div>
+            </div>
+            <!-- Task & Project Management -->
+            <div class="tools-sub-category">
+              <h4 class="tools-sub-title"><i class="fa-solid fa-list-check"></i> Project Management</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Backlog</span>
+                <span class="skill-badge">Jira</span>
+              </div>
+            </div>
+            <!-- Automation -->
+            <div class="tools-sub-category">
+              <h4 class="tools-sub-title"><i class="fa-solid fa-robot"></i> Automation</h4>
+              <div class="skill-list">
+                <span class="skill-badge">Google Apps Script</span>
+              </div>
+            </div>
+            <!-- Documentation & Design -->
+            <div class="tools-sub-category">
+              <h4 class="tools-sub-title"><i class="fa-solid fa-file-lines"></i> Docs & Design</h4>
+              <div class="skill-list">
+                <span class="skill-badge">esa</span>
+                <span class="skill-badge">Confluence</span>
+                <span class="skill-badge">MkDocs</span>
+                <span class="skill-badge">GitHub Pages</span>
+                <span class="skill-badge">draw.io</span>
+                <span class="skill-badge">Miro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Timeline Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">実務経歴</h2>
+      </div>
+      <!-- Career Timeline Chart -->
+      <div class="work-history-chart-container">
+        <h3 class="summary-title"><i class="fa-solid fa-chart-simple"></i> キャリアタイムライン (Career Timeline)</h3>
+        <div class="chart-scroll-wrapper">
+          <div class="timeline-chart">
+            <!-- X軸ヘッダー (年・月目盛り) -->
+            <div class="chart-header">
+              <div class="chart-col-title">プロジェクト概要</div>
+              <div class="time-scale-wrapper">
+                <!-- 年目盛り -->
+                <div class="time-scale years-scale">
+                  <div class="scale-year" style="grid-column: 1 / 8;">2026 ~</div>
+                  <div class="scale-year" style="grid-column: 8 / 20;">2025</div>
+                  <div class="scale-year" style="grid-column: 20 / 32;">2024</div>
+                  <div class="scale-year" style="grid-column: 32 / 44;">2023</div>
+                  <div class="scale-year" style="grid-column: 44 / 56;">2022</div>
+                  <div class="scale-year" style="grid-column: 56 / 63;">2021</div>
+                </div>
+                <!-- 月目盛り (開始・終了月の境界線上に配置) -->
+                <div class="time-scale months-scale">
+                  <div class="scale-month" style="grid-column: 1;">07</div>
+                  <div class="scale-month" style="grid-column: 11;">09</div>
+                  <div class="scale-month" style="grid-column: 15;">06</div>
+                  <div class="scale-month" style="grid-column: 28;">06</div>
+                  <div class="scale-month" style="grid-column: 37;">09</div>
+                  <div class="scale-month"
+                    style="grid-column: 62; text-align: right; margin-left: 0; margin-right: -12px;">06</div>
+                </div>
+              </div>
+            </div>
+            <!-- 各プロジェクト行 -->
+            <div class="chart-body">
+              <!-- 背景ガイドライン (対象月の青点線) -->
+              <div class="grid-guide-lines">
+                <div class="guide-line" style="grid-column: 1;"></div>
+                <div class="guide-line" style="grid-column: 11;"></div>
+                <div class="guide-line" style="grid-column: 15;"></div>
+                <div class="guide-line" style="grid-column: 28;"></div>
+                <div class="guide-line" style="grid-column: 37;"></div>
+                <div class="guide-line"
+                  style="grid-column: 62; border-left: none; border-right: 1px dashed rgba(99, 102, 241, 0.4);"></div>
+              </div>
+              <!-- Project 5 -->
+              <div class="chart-row">
+                <div class="project-name-cell">AWSネットワーク構築・運用保守</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p5"
+                    style="grid-column: 1 / 11; background: linear-gradient(135deg, #f97316, #ec4899);"
+                    title="2025/10/01 ~ 現在 (10ヶ月)" data-project="project-5"></div>
+                </div>
+              </div>
+              <!-- Project 4 -->
+              <div class="chart-row">
+                <div class="project-name-cell">CI/CD・WSUSサーバー構築</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p4" style="grid-column: 11 / 15;" title="2025/06/01 ~ 2025/09/30 (4ヶ月)"
+                    data-project="project-4"></div>
+                </div>
+              </div>
+              <!-- Project 3 -->
+              <div class="chart-row">
+                <div class="project-name-cell">自社サービスAWS運用保守</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p3" style="grid-column: 15 / 28;" title="2024/06/01 ~ 2025/05/31 (12ヶ月)"
+                    data-project="project-3"></div>
+                </div>
+              </div>
+              <!-- Project 2-2 -->
+              <div class="chart-row">
+                <div class="project-name-cell">保守運用自動化推進</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p2-2" style="grid-column: 15 / 37;" title="2023/09/01 ~ 2025/05/31 (21ヶ月)"
+                    data-project="project-2-2"></div>
+                </div>
+              </div>
+              <!-- Project 2-1 -->
+              <div class="chart-row">
+                <div class="project-name-cell">SRE複数顧客AWS運用保守</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p2-1" style="grid-column: 15 / 37;" title="2023/09/01 ~ 2025/05/31 (21ヶ月)"
+                    data-project="project-2-1"></div>
+                </div>
+              </div>
+              <!-- Project 1 -->
+              <div class="chart-row">
+                <div class="project-name-cell">AWSマルチアカウント基盤整備</div>
+                <div class="chart-bar-cell">
+                  <div class="chart-bar bar-p1" style="grid-column: 37 / 63;" title="2021/06/01 ~ 2023/08/31 (27ヶ月)"
+                    data-project="project-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-scroll-tip">
+          <span><i class="fa-solid fa-angles-left-right"></i> スワイプ・ドラッグで横にスクロールできます</span>
+          <span class="tip-divider">|</span>
+          <span><i class="fa-solid fa-hand-pointer"></i> 各バーをクリックすると、詳細経歴へジャンプします</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Project 5: AWS Network & Operations -->
+        <div class="timeline-item" id="project-5"
+          data-tech="aws network terraform cicd security docs monitoring grafana">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2025/10/01 ~ 現在 (10ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>AWSネットワーク構築と運用保守</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 3名</span>
+              <span class="meta-badge"><i class="fa-solid fa-arrows-spin"></i> 開発方式: アジャイル(スクラム)</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge active">要件定義</span>
+              <span class="phase-badge active">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge active">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              複数VPC環境におけるTransit
+              Gatewayを用いたネットワークの集中管理や新規VPCの設計・構築を牽引。また、コスト最適化に向けたAthena/Glue/Grafanaによるトラフィック可視化や監視環境の構築、HCP
+              Terraformを用いたIaC推進、GitHub Actionsによるセキュリティ強化などを実施。
+            </p>
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>Transit Gatewayを活用した複数VPCネットワークの統合管理、および新規VPCの設計・構築。</li>
+                  <li>Amazon Route 53プライベートホストゾーン、VPCエンドポイント（AWS PrivateLink）の管理・構築によるセキュアな閉域接続環境の整備。</li>
+                  <li>コスト最適化を目的に、AWS GlueとAmazon Athenaを活用したTGWおよびVPCフローログの解析、およびGrafanaを用いたネットワークトラフィックの可視化基盤の構築。</li>
+                  <li>AWS LambdaによるAthenaクエリの定期実行処理の実装、およびCloudWatchカスタムメトリクスの自動生成による継続的な監視環境の整備。</li>
+                  <li>HCP Terraformを用いたインフラデプロイ、アカウント・権限管理、およびプライベートモジュールレジストリを活用したコードの共通化。</li>
+                  <li>GitHub ActionsによるCI/CDパイプラインへのAIレビュー導入およびセキュリティ強化。</li>
+                  <li>通信要件一覧表のGit管理化およびGitHub Pagesを用いたドキュメント自動公開フローの構築。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>Transit GatewayおよびPrivateLinkの活用により、セキュアでスケーラブルなマルチVPC環境を構築。</li>
+                  <li>Grafanaを用いたトラフィック情報の可視化・分析により、不要な通信経路の特定とネットワークコストの最適化を達成。</li>
+                  <li>LambdaとCloudWatchカスタムメトリクスを連携させた監視自動化により、トラフィック異常の即時検知体制を確立。</li>
+                  <li>HCP Terraformのプライベートモジュール管理を推進し、IaCコードの再利用性を高め、開発の標準化と工数削減を実現。</li>
+                  <li>CI/CDにおけるAIレビューとセキュリティチェックの自動導入により、インフラ構成変更時のバグ早期発見とデプロイ安全性を向上。</li>
+                  <li>通信要件をGitHubベースでドキュメント化（GitHub Pages連携）し、チーム間・構成変更時の通信確認フローを大幅に効率化。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>AWS Transit Gateway</span>
+                  <span>Amazon Route 53</span>
+                  <span>AWS PrivateLink</span>
+                  <span>Amazon VPC</span>
+                  <span>AWS Lambda</span>
+                  <span>Amazon Athena</span>
+                  <span>AWS Glue</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>HCP Terraform</span>
+                  <span>Terraform</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">CI/CD</span>
+                <div class="tech-tags">
+                  <span>GitHub Actions</span>
+                  <span>GitHub Pages</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Observability & Security</span>
+                <div class="tech-tags">
+                  <span>Grafana</span>
+                  <span>Amazon CloudWatch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: CI/CD & WSUS Build -->
+        <div class="timeline-item" id="project-4" data-tech="aws iac cicd">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2025/06/01 ~ 2025/09/30 (4ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>AWS CodePipelineを使用したCI/CD構築とWSUSサーバー構築</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 10名</span>
+              <span class="meta-badge"><i class="fa-solid fa-diagram-project"></i> 開発方式: ウォーターフォール</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge">要件定義</span>
+              <span class="phase-badge">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              AWS CDKを用いたインフラのコード化や、AWS CodePipelineによるCI/CD環境の構築。また、Windows Server 2022を用いたWSUSサーバーの設計および構築に従事。
+            </p>
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>AWS CDK (TypeScript) と AWS CodePipeline / AWS CodeBuild を活用したCI/CDパイプラインの設計・構築。</li>
+                  <li>Windows Server 2022を用いたWSUSサーバーの設計・構築および運用保守。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>手動デプロイ作業をCodePipelineで自動化し、リリースミスの撲滅と環境の再現性を確立。</li>
+                  <li>セキュリティ基準を満たした高可用なWindows Update集中管理基盤（WSUS）を構築。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>Amazon Elastic Compute Cloud (Amazon EC2)</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>AWS Cloud Development Kit (AWS CDK)</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">CI/CD</span>
+                <div class="tech-tags">
+                  <span>AWS CodePipeline</span>
+                  <span>AWS CodeBuild</span>
+                  <span>AWS CodeCommit</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Platform</span>
+                <div class="tech-tags">
+                  <span>Windows Server 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Account Service AWS -->
+        <div class="timeline-item" id="project-3" data-tech="aws iac cicd monitoring">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2024/06/01 ~ 2025/05/31 (12ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>自社サービス向けAWS運用の保守・最適化</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 1〜2名 (アプリ開発者除く)</span>
+              <span class="meta-badge"><i class="fa-solid fa-arrows-spin"></i> 開発方式: アジャイル</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge active">要件定義</span>
+              <span class="phase-badge active">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge active">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              自社提供のサービスにおける、AWSインフラ環境およびCI/CDパイプラインの運用保守。
+            </p>
+
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>責任者や開発者と密に連携し、アプリケーションの仕様・要件をヒアリングした上で、最適なインフラ構成への見直しや最適化の実施。</li>
+                  <li>CDK for Terraform (TypeScript) および GitHub Actions を活用したインフラ構成変更とCI/CDパイプライン構築。</li>
+                  <li>アプリケーション開発者と協力し、CIによる自動デプロイ環境の整備や、APIに関連するAWS側での構成調整等を実施。</li>
+                  <li>Amazon Cognitoを用いた認証基盤およびユーザー管理の設計・運用保守。</li>
+                  <li>Datadogアラームを用いた監視設定の構築、通知ルール設計および対応フロー整備、アラート対応。</li>
+                  <li>システムエラー発生時の原因調査、一次対応および恒久対応策の実施。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>アプリケーションのCI/CDパイプラインの構築によるデプロイの迅速化.</li>
+                  <li>Datadogアラーム設定をTerraformでコード化し、監視設定の一元管理を実現。</li>
+                  <li>Amazon QuickSightを活用し、複数AWSアカウントにまたがるコスト情報の集約・可視化によるコスト最適化の推進。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>Amazon Elastic Container Service (Amazon ECS)</span>
+                  <span>Amazon API Gateway</span>
+                  <span>Amazon Cognito</span>
+                  <span>Amazon QuickSight</span>
+                  <span>AWS Glue</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>CDK for Terraform (TypeScript)</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">CI/CD</span>
+                <div class="tech-tags">
+                  <span>GitHub Actions</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Observability & Security</span>
+                <div class="tech-tags">
+                  <span>Datadog</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2-2: Automation -->
+        <div class="timeline-item" id="project-2-2" data-tech="aws iac cicd automation amplify nuxt3 frontend">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2023/09/01 ~ 2025/05/31 (21ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>SRE業務の自動化推進と社内経費申請システムの開発</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 3〜5名</span>
+              <span class="meta-badge"><i class="fa-solid fa-arrows-spin"></i> 開発方式: アジャイル</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge active">要件定義</span>
+              <span class="phase-badge active">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge active">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              SRE業務における定型作業の自動化による運用効率化と、AWS AmplifyとNuxt3を採用した社内経費申請サイトの構築による社内手続きのデジタル化・DXを牽引。
+            </p>
+
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>Slack、Google Apps Script (GAS)、Backlog、esaを連携させた業務フローの自動化。</li>
+                  <li>Terraformを用いたAWS自動化基盤（通知連携など）の設計・構築。</li>
+                  <li>AWS AmplifyとNuxt3を活用した社内経費申請サイトの設計・フロントエンド開発・AWS基盤構築および運用管理。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>インシデントのBacklog自動起票により、手動管理による起票漏れや遅延をゼロ化。</li>
+                  <li>Slackと連携した運用コマンドの自動実行機能の導入により、定型作業ステップを大幅に削減。</li>
+                  <li>AWS HealthやDatadogからの障害・メンテ通知をSlack/Backlogへ自動集約し、即時検知体制を構築。</li>
+                  <li>AWS AmplifyとNuxt3を組み合わせたサーバーレス構成での社内経費申請サイトを構築。手動・紙ベースの申請業務をデジタル化し、申請承認フローの迅速化と管理部門の月間工数を削減。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>AWS Step Functions</span>
+                  <span>AWS Lambda</span>
+                  <span>Amazon EventBridge</span>
+                  <span>AWS Systems Manager</span>
+                  <span>AWS Chatbot</span>
+                  <span>AWS Amplify</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>Terraform</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">CI/CD</span>
+                <div class="tech-tags">
+                  <span>GitHub Actions</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Languages & Frameworks</span>
+                <div class="tech-tags">
+                  <span>TypeScript</span>
+                  <span>Nuxt 3</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Tools</span>
+                <div class="tech-tags">
+                  <span>Google Apps Script</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2-1: SRE SRE Support -->
+        <div class="timeline-item" id="project-2-1" data-tech="aws iac cicd monitoring">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2023/09/01 ~ 2025/05/31 (21ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>AWS環境のSRE運用保守</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 3〜5名</span>
+              <span class="meta-badge"><i class="fa-solid fa-arrows-spin"></i> 開発方式: アジャイル</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge active">要件定義</span>
+              <span class="phase-badge active">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge active">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              SREチームの一員として約10社の顧客AWS環境を担当。障害対応、構成変更、セキュリティ改善、コスト最適化を通じてインフラの信頼性と運用性を継続的に向上。
+            </p>
+
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>Terraform、GitHub Actions、CircleCIを用いたインフラ構成変更とCI/CD構築。</li>
+                  <li>Datadogによる監視設計・アラート通知整備、および障害対応フローの策定。</li>
+                  <li>システムエラーや障害発生時の調査、一次対応および恒久対応の実施。</li>
+                  <li>Snykで検知されたパッケージやコンテナイメージのセキュリティ脆弱性に対する、パッケージアップデートや是正対応の実施。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>WordPressサーバーのOS移行（CentOS 7からAmazon Linux 2023への安全なマイグレーション、およびEFSマウントによるコンテンツ共有化）。</li>
+                  <li>AWS DMS (Database Migration Service) を活用した、Amazon RDS (MySQL 5.7から8.0) のバージョンアップ計画策定と安全なデータ移行の実施。
+                  </li>
+                  <li>AWS WAF、CloudFront、Lambda@Edgeを用いたセキュリティ強化とキャッシュ最適化。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>AWS Organizations</span>
+                  <span>Amazon Elastic Compute Cloud (Amazon EC2)</span>
+                  <span>Amazon Relational Database Service (Amazon RDS)</span>
+                  <span>AWS Database Migration Service (AWS DMS)</span>
+                  <span>Amazon Elastic File System (Amazon EFS)</span>
+                  <span>Amazon CloudFront</span>
+                  <span>AWS WAF</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>Terraform</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">CI/CD</span>
+                <div class="tech-tags">
+                  <span>GitHub Actions</span>
+                  <span>CircleCI</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">Observability & Security</span>
+                <div class="tech-tags">
+                  <span>Datadog</span>
+                  <span>Snyk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 1: Multi Account -->
+        <div class="timeline-item" id="project-1" data-tech="aws iac monitoring">
+          <div class="timeline-dot"></div>
+          <span class="timeline-time">2021/06/01 ~ 2023/08/31 (27ヶ月)</span>
+          <div class="timeline-content">
+            <div class="project-title">
+              <h3>AWSマルチアカウント共通基盤の設計・統制整備</h3>
+            </div>
+            <div class="project-meta">
+              <span class="meta-badge"><i class="fa-solid fa-user-tie"></i> 役割: SE</span>
+              <span class="meta-badge"><i class="fa-solid fa-user-group"></i> チーム体制: 2~3名</span>
+              <span class="meta-badge"><i class="fa-solid fa-arrows-spin"></i> 開発方式: アジャイル</span>
+            </div>
+            <div class="project-phases">
+              <span class="phase-title"><i class="fa-solid fa-bars-progress"></i> 担当工程:</span>
+              <span class="phase-badge active">要件定義</span>
+              <span class="phase-badge active">基本設計</span>
+              <span class="phase-badge active">詳細設計</span>
+              <span class="phase-badge active">構築・テスト</span>
+              <span class="phase-badge active">運用・保守</span>
+            </div>
+            <p class="project-subtitle">プロジェクト概要</p>
+            <p class="project-desc">
+              AWS Organizationsを用いたアカウント分割（開発・本番・監査等）と、セキュリティ統制やアクセス制御を両立させたマルチアカウント運用の共通基盤整備。
+            </p>
+
+            <button class="details-toggle-btn" aria-expanded="false">
+              <span>詳細を表示</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="project-desc-wrapper">
+              <div class="project-desc-inner">
+                <p class="project-subtitle">担当業務</p>
+                <ul class="project-list">
+                  <li>マルチアカウントにおけるアカウント分割方針（開発・本番・監査等）の策定と要件定義。</li>
+                  <li>AWS CloudFormationを用いたインフラテンプレート（IaC）の作成とデプロイ。</li>
+                  <li>既存リソースのセキュリティチェックと、設定の是正対応。</li>
+                </ul>
+
+                <p class="project-subtitle">実績・取り組み</p>
+                <ul class="project-list">
+                  <li>AWS Config、Security Hub、GuardDutyを用いたセキュリティ監視・統制の自動化。</li>
+                  <li>Amazon CloudWatchダッシュボードおよびアラーム導入による、運用監視の可視化。</li>
+                  <li>IAMの適切な設計によるアクセス権限の整理（最小権限の原則の適用）。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech-groups">
+              <div class="tech-group">
+                <span class="tech-group-title">AWS Services</span>
+                <div class="tech-tags">
+                  <span>AWS Identity and Access Management (AWS IAM)</span>
+                  <span>AWS Organizations</span>
+                  <span>AWS Lambda</span>
+                  <span>AWS Security Hub</span>
+                  <span>Amazon GuardDuty</span>
+                  <span>AWS Config</span>
+                  <span>AWS CloudTrail</span>
+                  <span>Amazon CloudWatch</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-title">IaC</span>
+                <div class="tech-tags">
+                  <span>AWS CloudFormation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action / Contact -->
+  <section id="contact" class="section cta">
+    <div class="container">
+      <div class="cta-card">
+        <h2 class="cta-title">お気軽にコンタクトください</h2>
+        <p class="cta-desc">
+          AWSのインフラ設計構築、運用自動化、SRE体制の立ち上げなど、何かお役に立てることがあれば、お気軽にご連絡ください。
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:taiga.ogura@example.com" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> メールを送る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; <span id="current-year"></span> Taiga Ogura. All rights reserved.
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/tiga-ga" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <!-- Add other social links if needed -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
